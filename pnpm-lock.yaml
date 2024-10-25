@@ -19,7 +19,7 @@ importers:
         version: 10.4.5(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)
       '@nestjs/typeorm':
         specifier: ^10.0.2
-        version: 10.0.2(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.20(mysql2@3.11.3)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)))
+        version: 10.0.2(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.21-dev.e7649d2(mysql2@3.11.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)))
       mysql2:
         specifier: ^3.11.3
         version: 3.11.3
@@ -30,8 +30,8 @@ importers:
         specifier: ^7.8.1
         version: 7.8.1
       typeorm:
-        specifier: ^0.3.20
-        version: 0.3.20(mysql2@3.11.3)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3))
+        specifier: 0.3.21-dev.e7649d2
+        version: 0.3.21-dev.e7649d2(mysql2@3.11.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3))
     devDependencies:
       '@nestjs/cli':
         specifier: ^10.0.0
@@ -2743,8 +2743,8 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  typeorm@0.3.20:
-    resolution: {integrity: sha512-sJ0T08dV5eoZroaq9uPKBoNcGslHBR4E4y+EBHs//SiGbblGe7IeduP/IH4ddCcj0qp3PHwDwGnuvqEAnKlq/Q==}
+  typeorm@0.3.21-dev.e7649d2:
+    resolution: {integrity: sha512-9EdizYpuoUYHwmeSoZY4bAUG26T2neA2hUb7d6//xKmLtbb4GdmD7nJejIbFxJ2+M0KIjG/9Bh4wbcaOMljN3Q==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     peerDependencies:
@@ -2761,6 +2761,7 @@ packages:
       pg-native: ^3.0.0
       pg-query-stream: ^4.0.0
       redis: ^3.1.1 || ^4.0.0
+      reflect-metadata: ^0.1.14 || ^0.2.0
       sql.js: ^1.4.0
       sqlite3: ^5.0.3
       ts-node: ^10.7.0
@@ -3578,13 +3579,13 @@ snapshots:
     optionalDependencies:
       '@nestjs/platform-express': 10.4.5(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)
 
-  '@nestjs/typeorm@10.0.2(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.20(mysql2@3.11.3)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)))':
+  '@nestjs/typeorm@10.0.2(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.5)(reflect-metadata@0.2.2)(rxjs@7.8.1)(typeorm@0.3.21-dev.e7649d2(mysql2@3.11.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)))':
     dependencies:
       '@nestjs/common': 10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1)
       '@nestjs/core': 10.4.5(@nestjs/common@10.4.5(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.4.5)(reflect-metadata@0.2.2)(rxjs@7.8.1)
       reflect-metadata: 0.2.2
       rxjs: 7.8.1
-      typeorm: 0.3.20(mysql2@3.11.3)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3))
+      typeorm: 0.3.21-dev.e7649d2(mysql2@3.11.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3))
       uuid: 9.0.1
 
   '@nodelib/fs.scandir@2.1.5':
@@ -6036,7 +6037,7 @@ snapshots:
 
   typedarray@0.0.6: {}
 
-  typeorm@0.3.20(mysql2@3.11.3)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)):
+  typeorm@0.3.21-dev.e7649d2(mysql2@3.11.3)(reflect-metadata@0.2.2)(ts-node@10.9.2(@types/node@20.16.13)(typescript@5.6.3)):
     dependencies:
       '@sqltools/formatter': 1.2.5
       app-root-path: 3.1.0
