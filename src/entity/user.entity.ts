@@ -3,8 +3,8 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, U
 @Entity({ name: 'user' })
 @Unique(['username', 'email'])
 export class User extends BaseEntity {
-  @PrimaryGeneratedColumn('uuid')
-  uid: string
+  @PrimaryGeneratedColumn('increment')
+  uid: number
 
   @Column({ type: 'varchar', length: 191, comment: '유저 name' })
   username: string;
