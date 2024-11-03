@@ -80,12 +80,12 @@ export class UserController {
    * @author Ryan
    * @description @Body 방식 - 전체 유저 수정
    *
-   * @param id 유저 고유 아이디
-   * @param name 유저 이름
+   * @param uid 유저 고유 아이디
+   * @param username 유저 이름
    */
   @Put('/user/update')
-  setAllUser(@Body('id') id: number, @Body('name') name: string): User[] {
-    return this.userService.setAllUser(id, name);
+  setAllUser(@Body('uid') uid: number, @Body('name') username: string): User[] {
+    return this.userService.setAllUser(uid, username);
   }
 
   /**
