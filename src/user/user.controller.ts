@@ -84,7 +84,7 @@ export class UserController {
    * @param username 유저 이름
    */
   @Put('/user/update')
-  setAllUser(@Body('uid') uid: number, @Body('name') username: string): User[] {
+  setAllUser(@Body('uid') uid: number, @Body('name') username: string): { username: any; uid: any }[] {
     return this.userService.setAllUser(uid, username);
   }
 
