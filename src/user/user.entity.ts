@@ -1,4 +1,14 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Unique } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  Unique,
+  OneToMany,
+} from 'typeorm';
+import { Post } from "../post/post.entity"
 
 @Entity({ name: 'user' })
 @Unique(['username', 'email'])
@@ -26,4 +36,7 @@ export class User extends BaseEntity {
 
   @UpdateDateColumn({ name: 'update_at', comment: '수정일' })
   updatedAt: Date;
+
+  @OneToMany(type => Post, photo => photo.user)
+  posts: Post[]
 }
