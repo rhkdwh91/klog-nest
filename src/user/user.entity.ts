@@ -37,6 +37,6 @@ export class User extends BaseEntity {
   @UpdateDateColumn({ name: 'update_at', comment: '수정일' })
   updatedAt: Date;
 
-  @OneToMany(type => Post, post => post.user)
+  @OneToMany(() => Post, post => post)
   posts: Post[]
 }

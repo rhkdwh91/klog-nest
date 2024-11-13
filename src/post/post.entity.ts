@@ -5,9 +5,10 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  ManyToOne, JoinColumn,
+  ManyToOne, JoinColumn, OneToMany,
 } from 'typeorm';
 import { User } from '../user/user.entity';
+import { Comment } from '../comment/comment.entity';
 
 @Entity({ name: 'post' })
 export class Post extends BaseEntity {
@@ -20,9 +21,13 @@ export class Post extends BaseEntity {
   @Column({ type: 'text', length: 191, comment: 'content' })
   content: string;
 
-  @ManyToOne(type => User, user => user.posts)
+  @ManyToOne(() => User, user => user.posts)
   @JoinColumn({ name: 'userUid' })
   user: User;
+
+  @OneToMany(() => Comment, comment => comment)
+  @JoinColumn({ name: 'userUid' })
+  comment: Comment[];
 
   @CreateDateColumn({ name: 'create_at', comment: '생성일' })
   createdAt: Date;
